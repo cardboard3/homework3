@@ -4,7 +4,10 @@ let outArray = origArray;
 
 window.addEventListener('DOMContentLoaded', (event) => {
 WriteToText()
-button2.addEventListener("click", anonymousFunction);
+button2.addEventListener("click", function(){
+    outArray = origArray.map(x => x ** 3);
+    WriteToText()
+});
 button3.addEventListener("click", ButtonScript3);
 
 });
@@ -13,10 +16,11 @@ function ButtonScript1(){
     outArray = origArray.map(x => x ** 2);
     WriteToText()
 }
-let anonymousFunction = function(){
-    outArray = origArray.map(x => x ** 3);
-    WriteToText()
-};
+//Old anonymous function
+// function(){
+//     outArray = origArray.map(x => x ** 3);
+//     WriteToText()
+// };
 function ButtonScript3(){
     outArray = origArray.map(x => x ** 4);
     WriteToText()
